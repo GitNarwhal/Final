@@ -1,0 +1,115 @@
+$primary: #084359;
+$secondary: #6c757d;
+$light: #f8f9fa;
+$dark: #343a40;
+$blue: #f1f1f1;
+
+.custom-navbar {
+  background-color: $primary;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-custom {
+  padding-top: 7rem;  //needed so text isnt too close to nav bar
+  padding-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif; //sets whole page to have this font
+}
+
+header {
+  background-image: url('../images/header-bg.jpg'); 
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.about-me {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.about-para {
+  margin-bottom: 3rem;
+  margin: auto;
+  padding-top: 3.5rem;
+  padding-bottom: 3rem;
+  background-color: $blue; // Light box with transparency
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  @media (min-width: 768px) {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.my-work {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.work-para {
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+  color: white;
+  background-color: $primary; // Light box with transparency
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+  transform: translateX(-1rem);
+  transition: all 0.4s ease;
+
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
+
+  &:hover {
+    opacity: 1;
+    transform: translateX(0); // Slide to center
+  }
+}
+
+.portfolio-item {
+    opacity: 50%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    opacity: 100%;
+  }
+}
+
+.contact-para {
+  background-color: $light; 
+  padding: 1.5rem 2rem;
+  border-radius: 0.75rem;
+  border: 1px solid $secondary;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+  color: $dark;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: $dark;
+  color: white;
+}
+
+@media (max-width: 575.98px) {  //Mobile compatibility
+  .about-para,
+  .work-para {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
